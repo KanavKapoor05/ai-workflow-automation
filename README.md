@@ -1,16 +1,54 @@
-# ⚙️ AI-Powered Workflow Automation Platform
+# 🧠 AI Workflow Automation Platform
 
-An intelligent workflow automation platform that allows SMEs and professionals to generate optimized workflows using AI prompts.
+This is an AI-powered, no-code workflow automation platform built using the **MERN stack**. It allows users to generate automated workflows from natural language prompts and view their prompt history.
 
-## Features
+---
 
-- 🧠 AI-Powered Prompt-to-Workflow Generator (OpenRouter/OpenAI)
-- 🌙 Dark-Themed Responsive UI
-- 📝 Clickable Prompt History (Search History)
-- 🔁 Re-run and copy previous prompts
-- 🚀 Node.js + Express.js Backend
-- 🧰 MongoDB Atlas Integration
-- ⚛️ React.js Frontend
+## ✨ Features
+
+- ⚡ Generate task workflows from prompts using OpenRouter API
+- 💾 Save and display previous prompt history
+- 🎨 Dark-themed, responsive UI
+- 🧭 Interactive left sidebar with collapsible menu
+- 📋 Copy output to clipboard
+- 🗑️ Clear search history
+- 🔁 Real-time loading indicator while fetching output
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** React.js, CSS
+- **Backend:** Node.js, Express
+- **Database:** MongoDB (Atlas)
+- **AI API:** OpenRouter (free GPT-like models)
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+git clone https://github.com/KanavKapoor05/ai-workflow-automation.git
+cd ai-workflow-automation
+
+### 2. Install Backend Dependencies
+cd server
+npm install
+
+### 3. Environment Variables
+Create a `.env` file in the `server` folder using `.env.example` as reference:
+
+### 4.  Install Frontend Dependencies
+cd ../client
+npm install
+
+### 5. Start Backend and Frontend
+cd server
+npm run dev
+cd client
+npm start
+
+
 
 
 
