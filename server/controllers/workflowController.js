@@ -7,14 +7,14 @@ const generateWorkflow = async (req, res) => {
     const response = await axios.post(
       "https://openrouter.ai/api/v1/chat/completions",
       {
-        model:  "openrouter/auto", // You can change model name
+        model:  "openrouter/auto", 
         messages: [{ role: "user", content: prompt }],
          max_tokens: 600,
       },
       {
         headers: {
           "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
-          "HTTP-Referer": "http://localhost:5000", // Change to your domain in production
+          "HTTP-Referer": "http://localhost:5000", 
           "Content-Type": "application/json"
         },
       }

@@ -15,7 +15,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Hamburger Menu Icon */
+
 .hamburger {
   position: fixed;
   top: 20px;
@@ -111,7 +111,7 @@ pre {
   color: #ccc;
 }
 
-/* Fixed Bottom Chat Input */
+
 .chat-input {
   position: fixed;
   bottom: 0;
@@ -202,7 +202,7 @@ button:disabled {
   position: relative;
   width: 100%;
   max-width: 700px;
-  padding-top: 40px; /* Adds space for the copy button */
+  padding-top: 40px; 
 }
 
 .copy-btn {
@@ -223,11 +223,11 @@ button:disabled {
   background-color: #00dddd;
 }
 
-/* Optional: Add slight padding to pre text as well */
+
 pre {
   background-color: #1e1e1e;
   padding: 20px;
-  padding-top: 10px; /* Reduce top padding slightly */
+  padding-top: 10px; 
   border-radius: 8px;
   width: 100%;
   max-width: 700px;
