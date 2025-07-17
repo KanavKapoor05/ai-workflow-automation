@@ -10,27 +10,20 @@ dotenv.config();
 connectDB();
 
 const app = express();
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 5000;
 
 // Middlewares
 app.use(cors());
 app.use(express.json());
 
-// ✅ Routes
-const authRoutes = require("./routes/authRoutes");
+// Routes
 const workflowRoutes = require("./routes/workflowRoutes");
-const chatRoutes = require("./routes/chatRoutes");
-
-// ✅ Use routes
-app.use("/api/auth", authRoutes);        
-app.use("/api", workflowRoutes);        
-app.use("/api/chat", chatRoutes);        
+app.use("/api", workflowRoutes);
 
 // Default Route
 app.get("/", (req, res) => {
-  res.send("🧠 AI Workflow Automation Server is running");
+  res.send("AI Workflow Automation Server is running");
 });
-
 
 // Start Server
 app.listen(PORT, () => {
