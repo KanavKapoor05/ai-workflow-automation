@@ -9,7 +9,7 @@ const generateWorkflow = async (req, res) => {
       {
         model:  "openrouter/auto", 
         messages: [{ role: "user", content: prompt }],
-         max_tokens: 700,
+         max_tokens: 500,
       },
       {
         headers: {
