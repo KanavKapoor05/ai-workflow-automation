@@ -16,13 +16,19 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// Routes
+// ✅ Routes
+const authRoutes = require("./routes/authRoutes");
 const workflowRoutes = require("./routes/workflowRoutes");
-app.use("/api", workflowRoutes);
+const chatRoutes = require("./routes/chatRoutes");
+
+// ✅ Use routes
+app.use("/api/auth", authRoutes);        
+app.use("/api", workflowRoutes);        
+app.use("/api/chat", chatRoutes);        
 
 // Default Route
 app.get("/", (req, res) => {
-  res.send("AI Workflow Automation Server is running");
+  res.send("🧠 AI Workflow Automation Server is running");
 });
 
 // Start Server
