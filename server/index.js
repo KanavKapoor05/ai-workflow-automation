@@ -10,7 +10,7 @@ dotenv.config();
 connectDB();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
 
 // Middlewares
 app.use(cors());
@@ -30,6 +30,7 @@ app.use("/api/chat", chatRoutes);
 app.get("/", (req, res) => {
   res.send("🧠 AI Workflow Automation Server is running");
 });
+
 
 // Start Server
 app.listen(PORT, () => {
