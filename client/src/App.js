@@ -55,7 +55,7 @@ function App() {
 
   return (
     <div className="main-wrapper">
-      {/* Hamburger icon */}
+      {/* Hamburger */}
       <div className="hamburger" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
         <FaBars />
       </div>
@@ -81,17 +81,23 @@ function App() {
       <div className={`App ${isSidebarOpen ? "" : "centered"}`}>
         <h1 className="page-heading">Workflow Automation</h1>
 
-        <div className="chat-output">
-          {workflow && (
-            <div className="output-wrapper">
-              <button className="copy-btn" onClick={handleCopy}>
-                {copied ? "Copied!" : "Copy"}
-              </button>
+        {/* Chat-like Output */}
+        {workflow && (
+          <div className="chat-box">
+            <div className="user-message">
+              <strong>You:</strong> {history[0]}
+            </div>
+            <div className="ai-response">
+              <strong>AI:</strong>
               <pre>{workflow}</pre>
             </div>
-          )}
-        </div>
+            <button className="copy-btn" onClick={handleCopy}>
+              {copied ? "Copied!" : "Copy"}
+            </button>
+          </div>
+        )}
 
+        {/* Prompt Input */}
         <div className="chat-input">
           <form onSubmit={handleSubmit}>
             <input
